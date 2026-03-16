@@ -4,10 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simulasi Hukum Ohm's</title>
+    <!-- 
+      Nota: Vite akan menguruskan suntikan CSS secara automatik semasa proses binaan (build),
+      jadi anda tidak perlu risau tentang fail CSS di sini.
+    -->
   </head>
   <body>
+    <!-- Elemen 'root' adalah tempat di mana aplikasi React anda akan "dipasang" (mount) -->
     <div id="root"></div>
+
+    <!-- 
+      PERUBAHAN KRITIKAL:
+      Baris di bawah adalah rujukan kepada fail kemasukan (entry point) React anda.
+      - Kami menggunakan type="module" kerana Vite menggunakan sistem modul ES asli.
+      - Kami merujuk kepada '/src/main.tsx' (bukan index.tsx) kerana itu adalah nama fail 
+        sebenar dalam folder 'src' anda yang mengandungi fungsi createRoot().
+      
+      Tanpa baris ini, pelayar hanya akan memaparkan HTML kosong dan tidak akan 
+      menjalankan sebarang kod JavaScript React.
+    -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
